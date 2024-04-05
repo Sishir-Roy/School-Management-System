@@ -515,7 +515,7 @@ class Student:
         self.var_name.set(data_value[1])
         self.var_gender.set(data_value[2])
         self.var_email.set(data_value[3])
-        self.var_contact.set(data_value[4])
+        self.var_contact.set(str(data_value[4]).zfill(11))
         self.var_address.set(data_value[5])
         self.var_dept.set(data_value[6])
         self.var_session.set(data_value[7])
@@ -686,6 +686,7 @@ class Student:
         try:
             teacher_basic_salary = float(teacher_basic_salary)
             teacher_other_salary = float(teacher_other_salary)
+            teacher_net_salary = float(teacher_net_salary)
             if not teacher_net_salary:
                 # Calculate net salary if not provided
                 teacher_net_salary = teacher_basic_salary + teacher_other_salary
@@ -789,7 +790,7 @@ class Student:
         self.name_var.set(data_value[1])
         self.gender_var.set(data_value[2])
         self.email_var.set(data_value[3])
-        self.contact_var.set(data_value[4])
+        self.contact_var.set(str(data_value[4]).zfill(11))
         self.address_var.set(data_value[5])
         self.joining_var.set(data_value[6])
         self.dept_var.set(data_value[7])
